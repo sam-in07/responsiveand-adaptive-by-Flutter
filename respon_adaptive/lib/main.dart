@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:respon_adaptive/Style.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
 class HomeActivity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+   
     return Scaffold(
       appBar: AppBar(
         title: Text("Home"),
@@ -61,7 +63,7 @@ class HomeActivity extends StatelessWidget {
           }
         },
       ),
-    */
+
       body: SingleChildScrollView(
         // jokhon container height display height theka besi hoi jabe tokhon e ami scroollview add korbo  ke SingleChildScrollView
         //ke  anbo
@@ -83,6 +85,34 @@ class HomeActivity extends StatelessWidget {
           ],
         ),
       )
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Expanded(
+            flex: 25,
+              child: Container(color: Colors.teal,)
+          )
+,          Expanded(
+            flex: 25,
+              child: Container(color: Colors.red,)
+          ),
+          Expanded(
+            flex: 25,
+              child: Container(color: Colors.blue,)
+          ) ,
+          Expanded(
+              flex: 25,
+              child: Container(color: Colors.purple,)
+          )
+        ],
+      ), */
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Screen Width ' , style: Headline(context),),
+         
+        ],
+      ),
     );
   }
 //activity vitore txt dey amra throw korsi data
