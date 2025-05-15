@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 import 'package:respon_adaptive/Style.dart';
-
+import 'package:responsive_grid/responsive_grid.dart';
+import 'package:flutter_bootstrap/flutter_bootstrap.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -105,13 +107,179 @@ class HomeActivity extends StatelessWidget {
               child: Container(color: Colors.purple,)
           )
         ],
-      ), */
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text('Screen Width ' , style: Headline(context),),
          
         ],
+      ),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: ResponsiveGridRow(
+            children: [
+              ResponsiveGridCol(
+                  lg : 12,
+                  child: Container(
+                    height: 100,
+                    color: Colors.red,
+                  )
+              ) ,
+              ResponsiveGridCol(
+                  xl: 4 , lg: 6 , md:8 , sm:9 ,xs : 12,
+
+                  child: Container(
+                    height: 100,
+                    color: Colors.purple,
+                  )
+              ) ,
+              ResponsiveGridCol(
+                  xl: 4 , lg: 6 , md:8 , sm:9 ,xs : 12,
+
+                  child: Container(
+                    height: 100,
+                    color: Colors.pink,
+                  )
+              ) ,
+              ResponsiveGridCol(
+                  xl: 4 , lg: 6 , md:8 , sm:9 ,xs : 12,
+
+                  child: Container(
+                    height: 100,
+                    color: Colors.yellow,
+                  )
+              ) ,
+              ResponsiveGridCol(
+                  xl: 4 , lg: 6 , md:8 , sm:9 ,xs : 12,
+
+                  child: Container(
+                    height: 100,
+                    color: Colors.teal,
+                  )
+              ) ,
+              ResponsiveGridCol(
+                  xl: 4 , lg: 6 , md:8 , sm:9 ,xs : 12,
+
+                  child: Container(
+                    height: 100,
+                    color: Colors.blue,
+                  )
+              ) ,
+              ResponsiveGridCol(
+                  xl: 4 , lg: 6 , md:8 , sm:9 ,xs : 12,
+
+                  child: Container(
+                    height: 100,
+                    color: Colors.brown,
+                  )
+              ) ,
+            ]
+        ),
+      ) */
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: BootstrapContainer(
+          fluid: false, // eta hocce side jaige chari dibe
+          // childern nibo mane row niya vitro collum rakhbo
+          children: [
+            BootstrapRow(
+               height: 100,
+                children: [
+                  BootstrapCol(
+                      sizes: 'col-xl-1 col-lg-2 col-md-3 col-sm-4 col-6',
+                      child: Container(
+                        height: 100,
+                        color: Colors.red,
+                      )
+                  ),
+                  BootstrapCol(
+                      sizes: 'col-xl-1 col-lg-2 col-md-3 col-sm-4 col-6',
+                      child: Container(
+                        height: 100,
+                        color: Colors.green,
+                      )
+                  ),
+                  BootstrapCol(
+                      sizes: 'col-xl-1 col-lg-2 col-md-3 col-sm-4 col-6',
+                      child: Container(
+                        height: 100,
+                        color: Colors.deepOrange,
+                      )
+                  ),
+                  BootstrapCol(
+                      sizes: 'col-xl-1 col-lg-2 col-md-3 col-sm-4 col-6',
+                      child: Container(
+                        height: 100,
+                        color: Colors.brown,
+                      )
+                  ),
+                  BootstrapCol(
+                      sizes: 'col-xl-1 col-lg-2 col-md-3 col-sm-4 col-6',
+                      child: Container(
+                        height: 100,
+                        color: Colors.blue,
+                      )
+                  ),
+                  BootstrapCol(
+                      sizes: 'col-xl-1 col-lg-2 col-md-3 col-sm-4 col-6',
+                      child: Container(
+                        height: 100,
+                        color: Colors.black,
+                      )
+                  ),
+                  BootstrapCol(
+                      sizes: 'col-xl-1 col-lg-2 col-md-3 col-sm-4 col-6',
+                      child: Container(
+                        height: 100,
+                        color: Colors.pink,
+                      )
+                  ),
+                  BootstrapCol(
+                      sizes: 'col-xl-1 col-lg-2 col-md-3 col-sm-4 col-6',
+                      child: Container(
+                        height: 100,
+                        color: Colors.amber,
+                      )
+                  ),
+                  BootstrapCol(
+                      sizes: 'col-xl-1 col-lg-2 col-md-3 col-sm-4 col-6',
+                      child: Container(
+                        height: 100,
+                        color: Colors.green,
+                      )
+                  ),
+                  BootstrapCol(
+                      sizes: 'col-xl-1 col-lg-2 col-md-3 col-sm-4 col-6',
+                      child: Container(
+                        height: 100,
+                        color: Colors.blueAccent,
+                      )
+                  ),
+                  BootstrapCol(
+                      sizes: 'col-xl-1 col-lg-2 col-md-3 col-sm-4 col-6',
+                      child: Container(
+                        height: 100,
+                        color: Colors.indigo,
+                      )
+                  ),
+                  BootstrapCol(
+                      sizes: 'col-xl-1 col-lg-2 col-md-3 col-sm-4 col-6',
+                      child: Container(
+                        height: 100,
+                        color: Colors.purpleAccent,
+                      )
+                  ),
+
+
+
+
+
+
+                ]
+            )
+          ],
+        )
       ),
     );
   }

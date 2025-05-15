@@ -3,7 +3,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-
+import 'package:responsive_grid/responsive_grid.dart';
 TextStyle Headline(context) {
   var width =   MediaQuery.of(context).size.width;
   // resoposisizve and adaptive dission amra jeta make kori ita width theke ney
